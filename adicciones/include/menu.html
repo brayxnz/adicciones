@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevención de Adicciones</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap);
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            min-width: 100%;
+        }
+
+        .nav-menu {
+            margin-bottom: 90px;
+            background-color: #681434;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 98%;
+            padding: 10px;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        #menu-hamb {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu:checked ~ #menu-hamb {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lb-menu {
+            align-items: center;
+            width: 50px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 150px;
+            padding: 10px;
+            border-right: solid 1px white;
+        }
+        .logoCont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        .loginIMG {
+            width: 35px;
+            padding: 10px;
+        }
+        
+        .ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0; /* Añadido para centrar el menú */
+        }
+
+        .li {
+            list-style: none;
+            padding: 10px;
+            text-align: center;
+            margin: 5px;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        a {
+            width: fit-content;
+            text-decoration: none;
+            color: white;
+        }
+
+        .li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (min-width: 700px) {
+            .nav-menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 98vw;
+            }
+
+            #menu-hamb {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center; /* Alinea verticalmente en pantallas anchas */
+                margin: 0; /* Resetear el margen que podría afectar en pantallas anchas */
+            }
+
+            #menu, .lb-menu {
+                display: none;
+            }
+            
+            .ul {
+                flex-direction: row;
+            }
+
+            .li {
+                margin: 0 10px;
+            }
+            .li a:hover {
+                color: #d8c49c; 
+            }
+            .nav-menu a{
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <div class="logoCont">
+            <img src="../imgs/logo.svg" alt="Logo" class="logo"/>
+            <h1>El fentanilo mata</h1>
+        </div>
+        <input type="checkbox" id="menu" class="menu"/>
+        <label for="menu" class="lb-menu">
+            <img src="../imgs/menu.svg" alt="Menu" class="loginIMG"/>
+        </label>
+        <ul id="menu-hamb">
+            <li class="li"><a href="../pages/definicion.php">¿Qué es?</a></li>
+            <li class="li"><a href="../pages/sintomas.php">Señales</a></li>
+            <li class="li"><a href="../pages/efectos.php">Efectos</a></li>
+            <li class="li"><a href="../pages/consecuencias.php">Consecuencias</a></li>
+        </ul>
+        <div style="gap: 10px;">
+            <a id="back" href="index.php">
+                <img src="../imgs/back.svg" alt="flecha" style="width: 5vh"/>
+            </a>
+            <a href="../index.php">
+                <img src="../imgs/home.svg" alt="Logo" style="width: 5vh;"/>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
