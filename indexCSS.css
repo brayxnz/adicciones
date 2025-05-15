@@ -1,0 +1,207 @@
+/* CSS global */
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap);
+@font-face {
+    font-family: 'Kefir';
+    src: url('src/fonts/Kefir-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kefir', sans-serif;
+    color: #404041;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-footer {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Rubik', sans-serif;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%; /* Asegura que las columnas ocupen todo el ancho */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido dentro del máximo */
+    box-sizing: border-box;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+}
+
+.footer-column h5 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    max-width: 90%; /* Ajusta el tamaño del logo para que no se estire más de lo necesario */
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin: 20px 10px;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.cont > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #681434;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 8px solid rgb(75, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #d8c49c;
+    min-width: fit-content;
+}
+
+a {
+    text-decoration: none;
+    place-self: center;
+    width: fit-content;
+    min-width: 30vw;
+    height: fit-content;
+}
+.btn {
+    background-color: #082c2c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    width: max-content;
+    text-decoration: none;
+    place-self: center;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #062216;
+    cursor: pointer;
+}
+
+.pre-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #333;
+    border-radius: 10px;
+}
+
+.pre-cont h2 {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.pre-cont img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+.separator {
+    width: 2px;
+    height: 80%;
+    background-color: #ce0808;
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        font-size: 4rem;
+    }
+
+    .cont {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px;
+        max-width: 1000px;
+    }
+
+    .cont > div {
+        height: 250px;
+    }
+
+    .cont > div > a {
+        place-self: center;
+    }
+
+    .ultima {
+        grid-column: span 2;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
